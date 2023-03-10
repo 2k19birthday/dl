@@ -57,21 +57,12 @@ mysqli_close($conn);
 function validateForm() {
     var radios = document.querySelectorAll('input[type="radio"]');
     var checked = 0;
-    console.log(checked);
-    console.log(total);
     var total=<?php echo $num_rows; ?>;
-    
-    console.log(total);
     for(var i=0;i<radios.length;i++)
     {
         if(radios[i].checked)
         {
-            
-    console.log(checked);
-   
             checked++;
-   
-            console.log(checked);
         }
     }
     if(checked!==total)
@@ -80,4 +71,6 @@ function validateForm() {
         return false;
     }
 }
+console.log(total);
+console.log(checked);
 </script>
