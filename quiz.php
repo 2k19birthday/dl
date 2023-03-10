@@ -52,7 +52,18 @@ mysqli_close($conn);
 ?>
 </form>
 <script>
-    function validateForm(){
-        var 
+function validateForm() {
+    var radios = document.querySelectorAll('input[type="radio"]');
+    var checked = false;
+    for (var i = 0; i < radios.length; i++) {
+        if (radios[i].checked) {
+            checked = true;
+            break;
+        }
     }
-    </script>
+    if (!checked) {
+        alert("Please select at least one answer.");
+        return false;
+    }
+}
+</script>
