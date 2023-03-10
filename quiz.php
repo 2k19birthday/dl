@@ -23,7 +23,7 @@ if (!$result) {
     echo "<p>Error executing query: " . mysqli_error($conn) . "</p>";
     exit();
 }
-
+$current_question_id=null;
 if (mysqli_num_rows($result) > 0) {
     // loop through each question and display it on the webpage
     while ($row = mysqli_fetch_assoc($result)) {
