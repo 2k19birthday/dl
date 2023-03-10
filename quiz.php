@@ -24,7 +24,7 @@ if (!$result) {
     exit();
 }
 $current_question_id=null;
-$num_rows=mysqli_num_rows($result);
+$num_rows=mysqli_num_rows($result)/4;
 echo "<script>var total=$num_rows;</script>";
 ?>
 <form method='post' action='submit_quiz.php' onsubmit='return validateForm()'>
@@ -66,8 +66,6 @@ function validateForm() {
         }
     }
  
-console.log(total);
-console.log(checked);
     if(checked!==total)
     {
         alert("Please answer all questions.");
