@@ -60,7 +60,7 @@ echo "<p>You scored " . $score . " out of " . $total_questions . " (" . $percent
 // display selected answers
 echo "<p>Selected answers:</p>";
 foreach ($selected_answers as $question_id => $selected_answer) {
-    echo "<p>Question " . $question_id . ": " . $selected_answer . "</p>";
+    echo "<p>Question " . $question_id . ": " . ($selected_answer%4) . "</p>";
 }
 
 // close database connection
