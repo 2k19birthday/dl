@@ -25,7 +25,7 @@ if (!$result) {
 }
 $current_question_id=null;
 ?>
-<form method='post' action='submit_quiz.php'>
+<form method='post' action='submit_quiz.php' onsubmit='return validateForm()'>
 <?php
 if (mysqli_num_rows($result) > 0) {
     // loop through each question and display it on the webpage
@@ -51,3 +51,8 @@ if (mysqli_num_rows($result) > 0) {
 mysqli_close($conn);
 ?>
 </form>
+<script>
+    function validateForm(){
+        var 
+    }
+    </script>
