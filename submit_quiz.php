@@ -67,7 +67,6 @@ foreach ($selected_answers as $question_id => $selected_answer) {
     else{
         echo "<p>Question ". $question_id.":".($selected_answer%4)."</p>";
     }
-    echo "<p>Question " . $question_id . ": " . $answer_number. "</p>";
 }
 
 // close database connection
