@@ -54,15 +54,18 @@ mysqli_close($conn);
 <script>
 function validateForm() {
     var radios = document.querySelectorAll('input[type="radio"]');
-    var checked = false;
-    for (var i = 0; i < radios.length; i++) {
-        if (radios[i].checked) {
-            checked = true;
-            break;
+    var checked = 0;
+    var total=<?php echo mysqli_num_rows($result); ?>;
+    for(var i=0;i<radioa.length;i++)
+    {
+        if(radios[i].checked)
+        {
+            checked++;
         }
     }
-    if (!checked) {
-        alert("Please select at least one answer.");
+    if(checked!==total)
+    {
+        alert("Please answer all questions.");
         return false;
     }
 }
