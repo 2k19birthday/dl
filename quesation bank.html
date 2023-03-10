@@ -1,0 +1,161 @@
+
+<html>
+<head>
+	<title>
+		Driving license model question
+	</title>
+</head>
+<body><form name="myform"action="onclick=check()"><b>
+	<h1> Sample Question</h1>
+  <div> 
+ Q1 ओभरटेक गर्दा आगाडिको गाडीलाई कसरी संखेत दिने ?<br>
+<input type="radio" name=" q1" value="a">हेडलाइट बालेर<br>
+<input type="radio" name="q1"value="b">हर्न बजाएर र हेडलाइट बालेर<br>
+<input type="radio" name="q1"value="c">हर्न बजाएर<br>
+<input type="radio" name="q1"value="d">स्लोडउनको इसारा दिएर
+</div>
+<div>
+Q2 पहेंलो नम्बर प्लेटले कुन सबारीलाई जनाउँछ?<br>
+<input type="radio" name=" q2"value="a">संस्थानको
+<br>
+<input type="radio" name="q2"value="b">ट्राफिकको
+<br>
+<input type="radio" name="q2"value="c">निजी कारको
+<br>
+<input type="radio" name="q2"value="d">पर्यटनको
+</div>
+<div>
+Q3 नेपालमा सवारी साधनका नम्बर प्लेट कति किसिमका हुन्छन?<br>
+<input type="radio" name=" q3"value="a">२
+<br>
+<input type="radio" name="q3"value="b">३
+
+<br>
+<input type="radio" name=" q3"value="c">६
+
+<br>
+<input type="radio" name=" q3"value="d">७ 
+</div>
+	<div>
+Q4 इमर्जेन्सी लाइट कुन समयमा बाल्नुपर्छ?<br>
+<input type="radio" name=" q4"value="a">ओभरटेक गर्नी
+<br>
+<input type="radio" name=" q4"value="b">बिरामी बोकेको आवस्थामा
+
+<br>
+<input type="radio" name=" q4"value="c">हतार भएको बेलामा
+<br>
+<input type="radio" name=" q4"value="d">माथिको सबै
+</div>
+<div>
+Q5 जीपमा चालक सहित बढीमा कति जनासम्म यत्रि राखने सिट संख्या हुन्छ?<br>
+<input type="radio" name="q5"value="a">८
+<br>
+<input type="radio" name=" q5"value="b">१२
+<br>
+<input type="radio" name=" q5"value="c">१६
+<br>
+<input type="radio" name=" q5"value="d">१४
+</div>
+<div>
+Q6 इन्जिनको पार्ट पुर्जा चिल्लो बनाउने काम के ले गर्छ?<br>
+<input type="radio" name=" q6"value="a">मोबिलले
+<br>
+<input type="radio" name="q6"value="b">खाने तेलले
+<br>
+<input type="radio" name=" q6"value="c">पेट्रोल
+<br>
+<input type="radio" name=" q6"value="d">माथिका सबै
+</div>
+<div>
+Q7 लाइसेनस लिन पाउने सबैभन्दा कम उमेर कति हो ?<br>
+<input type="radio" name=" q7"value="a">१७ वर्ष
+<br>
+<input type="radio" name=" q7"value="b">१४ वर्ष
+<br>
+<input type="radio" name=" q7"value="c">१६ वर्ष
+<br>
+<input type="radio" name=" q7"value="d">१८ वर्ष
+</div>
+<div>
+<div>
+Q8 गाडी चलिरहेको बेलामा रोक्न परेमा कुन सिग्नल दिएर रोक्ने??<br>
+<input type="radio" name=" q8"value="a">हेड लाईट
+<br>
+<input type="radio" name=" q8"value="b">इमर्जेन्सी लाईट
+<br>
+<input type="radio" name=" q8"value="c">साइड लाईट
+<br>
+<input type="radio" name=" q8"value="d">ब्रेक लाईट
+</div>
+<div>
+Q9 ब्याट्रीलाई ओभरचार्जा हुनबाट के ले बचाउँछ?
+<br>
+<input type="radio" name=" q9"value="a">रोटर
+<br>
+<input type="radio" name=" q9"value="b">कट आउट
+<br>
+<input type="radio" name=" q9"value="c">एयर कुलर
+<br>
+<input type="radio" name=" q9"value="d">कुनै पनि हैन
+</div>
+<div>
+Q10 सवारी प्रदूषण मापदण्ड कैले बाट लागू भयको हो?<br>
+<input type="radio" name=" q10"value="a">२०४९
+<br>
+<input type="radio" name="q10"value="b">२०५४
+<br>
+<input type="radio" name=" q10"value="c">२०७०
+<br>
+<input type="radio" name=" q10"value="d">२०५६
+</div>
+<input type="button"  name="submit" value="Check your answer"  >
+</form></b>
+<script type="text/javascript"> 	
+	function check(){
+		var q1=document.myform.q1.value;
+		var q2=document.myform.q2.value;
+		var q3=document.myform.q3.value;
+		var q4=document.myform.q4.value;
+		var q5=document.myform.q5.value;
+		var q6=document.myform.q6.value;
+        var q7=document.myform.q7.value;
+		var q8=document.myform.q8.value;
+		var q9=document.myform.q9.value;
+		var q10=document.myform.q10.value;
+		var count=0;
+		if(q1=="d"){
+			count++;
+		}
+		if(q2=="d"){
+			count++;
+		}
+		if(q3=="c"){
+			count++;
+		}
+		if(q4=="d"){
+			count++;
+		}
+		if(q5=="a"){
+			count++;
+		}
+		if(q6=="a"){
+			count++;
+		}
+		if(q7=="c"){
+			count++;
+		}
+		if(q8=="d"){
+			count++;
+		}
+		if(q9=="a"){
+			count++;
+		}
+		if(q10=="d"){
+			count++;
+		}
+		alert("Congratulation you got :"+count+" ")
+	}
+</script>
+	</body>
+</html>
