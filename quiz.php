@@ -24,6 +24,7 @@ if (!$result) {
     exit();
 }
 $current_question_id=null;
+echo "form method='post' action='submit_quiz.php'>";
 if (mysqli_num_rows($result) > 0) {
     // loop through each question and display it on the webpage
     while ($row = mysqli_fetch_assoc($result)) {
