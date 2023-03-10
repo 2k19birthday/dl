@@ -65,12 +65,13 @@ function validateForm() {
             checked++;
         }
     }
+ 
+console.log(total);
+console.log(checked);
     if(checked!==total)
     {
         alert("Please answer all questions.");
         return false;
     }
 }
-console.log(total);
-console.log(checked);
 </script>
