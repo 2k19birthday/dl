@@ -46,8 +46,8 @@ if (mysqli_num_rows($result) > 0) {
 } else {
     echo "<p>No questions found.</p>";
 }
-?>
-</form>
+
 // close database connection
 mysqli_close($conn);
 ?>
+</form>
