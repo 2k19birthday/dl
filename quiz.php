@@ -57,7 +57,7 @@ mysqli_close($conn);
 function validateForm() {
     var radios = document.querySelectorAll('input[type="radio"]');
     var checked = 0;
-    var total=<?php echo mysqli_num_rows($result); ?>;
+    var total=<?php echo $num_rows; ?>;
     for(var i=0;i<radios.length;i++)
     {
         if(radios[i].checked)
