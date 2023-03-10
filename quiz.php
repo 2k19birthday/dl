@@ -24,7 +24,9 @@ if (!$result) {
     exit();
 }
 $current_question_id=null;
-echo "form method='post' action='submit_quiz.php'>";
+?>
+<form method='post' action='submit_quiz.php'>
+<?php
 if (mysqli_num_rows($result) > 0) {
     // loop through each question and display it on the webpage
     while ($row = mysqli_fetch_assoc($result)) {
@@ -44,7 +46,8 @@ if (mysqli_num_rows($result) > 0) {
 } else {
     echo "<p>No questions found.</p>";
 }
-
+?>
+</form>
 // close database connection
 mysqli_close($conn);
 ?>
