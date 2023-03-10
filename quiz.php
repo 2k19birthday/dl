@@ -24,7 +24,7 @@ if (!$result) {
     exit();
 }
 $current_question_id=null;
-$num_rows=mysqli_num_rows($result)/4;
+$num_rows=ceil(mysqli_num_rows($result)/4);
 echo "<script>var total=$num_rows;</script>";
 ?>
 <form method='post' action='submit_quiz.php' onsubmit='return validateForm()'>
