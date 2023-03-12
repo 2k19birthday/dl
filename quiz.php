@@ -1,5 +1,5 @@
 <?php
-// define database connection variables
+// define database connection variables tut
 $host = "localhost";
 $user = "root";
 $pass = "";
