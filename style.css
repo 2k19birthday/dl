@@ -178,6 +178,8 @@ body {
 
 .header .form-controller form input[type="text"],
 .header .form-controller form input[type="email"],
+.header .form-controller form input[type="password"],
+
 .header .form-controller form input[type="datetime-local"],
 .header .form-controller form select {
   width: 250px;

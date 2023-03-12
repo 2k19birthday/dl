@@ -1,11 +1,30 @@
 <?php
 if (isset($_POST['submit'])) {
-    $full_name = $_POST['full_name'];
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
     $email = $_POST['email'];
+    $password = $_POST['password'];
     $phone = $_POST['phone'];
-    $date = $_POST['date'];
-    $category = $_POST['category'];
     
-    // Process the form data here...
+    // Connect to the database
+    $conn = mysqli_connect('localhost', 'root', 'toor', 'quizdbase');
+
+    // Check connection
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+
+    // Insert form data into table
+    $sql = "INSERT INTO user (first_name, last_name, email, password, phone) VALUES ('$first_name', '$last_name', '$email', '$password', '$phone')";
+
+    if (mysqli_query($conn, $sql)) {
+        echo "Form data saved successfully";
+        header("Location: index.html");
+    } else {
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+    
+    // Close the database connection
+    mysqli_close($conn);
 }
 ?>
