@@ -1,81 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Driving institute</title>
-        <link rel="stylesheet" href="./style.css">
-    </head>
-    <body>
-        <!-- header start -->
-        <div class="header">
-            <!-- nav bar start -->
-            <nav class="nav-bar">
-                <!-- logo wrapper start -->
-                <div class="logo-wrapper">
-                    <span class="info">Driving </span>
-                    <span class="info-text">Institute</span>
-                </div>
-                <!-- end logo wrapper -->
-                <!-- nav items start -->
-                <ul class="nav-items">
-                    <li class="nav-item"><a class="active" href="/">Home</a></li>
-                    <li class="nav-item"><a href="#aboutus">About Us</a></li>
-                    <li class="nav-item"><a href="#services">Services</a></li>
-                    <li class="nav-item"><a href="#contactus">Contact</a></li>
-                </ul>
-                <!-- end nav items -->
-                <div class="mobile-responsiveicon"><img src="./images/menu-icon.png" alt=""></div>
-            </nav>
-            <!-- end nav bar -->
-            <div class="video-container">
-                <div class="video-overlay">
-                    <h3>The best and the most spacious </h3>
-                    <h1>Driving Institute</h1>
-                    <button class="btn btn-info">View More</button>
-                </div>
-                <video autoplay muted loop id="myVideo">
-                    <source src="./video.mp4" type="video/mp4">
-                </video>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driving institute</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <?php
+    //php code goes here
+    ?>
+    <!-- header start -->
+    <div class="header">
+        <!-- nav bar start -->
+        <nav class="nav-bar">
+            <!-- logo wrapper start -->
+            <div class="logo-wrapper">
+                <span class="info">Driving </span>
+                <span class="info-text">Institute</span>
             </div>
-            <div class="form-controller">
-                <h2>Sign Up</h2>
-                <form action="#" method="post">
-                    <div class="form-group">
-                        <input type="text" name="full_name" id="full_name" required placeholder="Enter Full name">
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" id="email" placeholder="Enter email">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="phone" id="phone" placeholder="Enter your phone">
-                    </div>
-                    <div class="form-group">
-                        <input type="datetime-local" name="date" id="date">
-                    </div>
-                    <div class="form-group">
-                        <select name="category" id="">
-                            <option value="" class="category-select">Motercycle</option>
-                            <option value="" class="category-select">Car</option>
-                            <option value="" class="category-select">Bus</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <input type="submit" name="submit" value="Submit">
-                    </div>
-                </form>
+            <!-- end logo wrapper -->
+            <!-- nav items start -->
+            <ul class="nav-items">
+                <li class="nav-item"><a class="active" href="/">Home</a></li>
+                <li class="nav-item"><a href="#aboutus">About Us</a></li>
+                <li class="nav-item"><a href="#services">Services</a></li>
+                <li class="nav-item"><a href="#contactus">Contact</a></li>
+            </ul>
+            <!-- end nav items -->
+            <div class="mobile-responsiveicon"><img src="./images/menu-icon.png" alt=""></div>
+        </nav>
+        <!-- end nav bar -->
+        <div class="video-container">
+            <div class="video-overlay">
+                <h3>The best and the most spacious </h3>
+                <h1>Driving Institute</h1>
+                <button class="btn btn-info">View More</button>
             </div>
+            <video autoplay muted loop id="myVideo">
+                <source src="./video.mp4" type="video/mp4">
+            </video>
         </div>
-        <!-- end header -->
-        <!-- start about us -->
-        <div class="about-us" id="aboutus">
-            <div class="about-header">
-                <h2>About us</h2>
-            </div>
-            <div class="about-container">
-                <div class="about-content">
-                    <h3>Welcome to </h3>
+        <div class="form-controller">
+            <h2>Sign Up</h2>
+            <form action="submit.php" method="post">
+                <div class="form-group">
+                    <input type="text" name="full_name" id="full_name" required placeholder="Enter Full name">
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" id="email" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="phone" id="phone" placeholder="Enter your phone">
+                </div>
+                <div class="form-group">
+                    <input type="datetime-local" name="date" id="date">
+                </div>
+                <div class="form-group">
+                    <select name="category" id="">
+                        <option value="" class="category-select">Motercycle</option>
+                        <option value="" class="category-select">Car</option>
+                        <option value="" class="category-select">Bus</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="submit" name="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- end header -->
+    <!-- start about us -->
+    <div class="about-us" id="aboutus">
+        <div class="about-header">
+            <h2>About us</h2>
+        </div>
+        <div class="about-container">
+            <div class="about-content">
+            <h3>Welcome to </h3>
                     <h2><span>Dr. Driving</span> Institute</h2>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti iste sed hic dolorum sapiente
                         soluta fugiat nihil rem, ullam ipsa, inventore, temporibus laudantium dignissimos veritatis
