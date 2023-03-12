@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 12, 2023 at 07:43 AM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 7.4.33
+-- Generation Time: Mar 12, 2023 at 01:46 PM
+-- Server version: 8.0.32
+-- PHP Version: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -28,11 +28,11 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `answers` (
-  `aid` int(250) NOT NULL,
-  `answer` varchar(250) NOT NULL,
-  `ans_id` int(250) NOT NULL,
-  `id` int(250) NOT NULL,
-  `is_correct` tinyint(1) NOT NULL DEFAULT 0
+  `aid` int NOT NULL,
+  `answer` varchar(250) COLLATE utf8mb4_general_ci NOT NULL,
+  `ans_id` int NOT NULL,
+  `id` int NOT NULL,
+  `is_correct` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -88,9 +88,9 @@ INSERT INTO `answers` (`aid`, `answer`, `ans_id`, `id`, `is_correct`) VALUES
 --
 
 CREATE TABLE `questions` (
-  `id` int(250) NOT NULL,
-  `question` varchar(250) NOT NULL,
-  `ans_id` int(250) NOT NULL
+  `id` int NOT NULL,
+  `question` varchar(250) COLLATE utf8mb4_general_ci NOT NULL,
+  `ans_id` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -117,10 +117,12 @@ INSERT INTO `questions` (`id`, `question`, `ans_id`) VALUES
 --
 
 CREATE TABLE `user` (
-  `uid` int(250) NOT NULL,
-  `username` varchar(250) NOT NULL,
-  `totalques` int(250) NOT NULL,
-  `answerscorrect` int(250) NOT NULL
+  `uid` int NOT NULL,
+  `first_name` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `last_name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `email` text COLLATE utf8mb4_general_ci NOT NULL,
+  `password` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `phone` text COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -153,19 +155,19 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `answers`
 --
 ALTER TABLE `answers`
-  MODIFY `aid` int(250) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `aid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT for table `questions`
 --
 ALTER TABLE `questions`
-  MODIFY `id` int(250) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `uid` int(250) NOT NULL AUTO_INCREMENT;
+  MODIFY `uid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
