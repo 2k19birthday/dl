@@ -7,7 +7,7 @@ if (isset($_POST['submit'])) {
     $phone_number = $_POST['phone_number'];
     
     // Connect to the database
-    $conn = mysqli_connect('localhost', 'root', '', 'quizdbase');
+    $conn = mysqli_connect('localhost', 'root', 'toor', 'quizdbase');
 
     // Check connection
     if (!$conn) {

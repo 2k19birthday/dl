@@ -2,7 +2,7 @@
 // define database connection variables tut
 $host = "localhost";
 $user = "root";
-$pass = "";
+$pass = "toor";
 $dbname = "quizdbase";
 
 // connect to MySQL database

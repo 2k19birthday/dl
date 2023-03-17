@@ -1,56 +1,94 @@
-	.instructor-rating {
-    padding-top: px;
+.star {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.star[data-rating="1"]::before {
+  content: "\2605";
+}
+
+.star[data-rating="2"]::before {
+  content: "\2605";
+}
+
+.star[data-rating="3"]::before {
+  content: "\2605";
+}
+
+.star[data-rating="4"]::before {
+  content: "\2605";
+}
+
+.star[data-rating="5"]::before {
+  content: "\2605";
+}
+
+.star:hover,
+.star.selected {
+  color: #ffc107;
+}
+.rog{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-color: aqua;
-  border-style: solid;
-  width: 270px;
-  border-width: 5px;
-  border-top: px;
-  background-color:#008080;
-  margin-right: 8px;
+  margin-left: 5px;
+
+}
+.instructor-rating {
+  padding-top: px;
+display: flex;
+flex-direction: column;
+align-items: center;
+border-color: aqua;
+border-style: solid;
+width: 270px;
+border-width: 5px;
+border-top: px;
+background-color:#008080;
+margin-right: 8px;
 }
 
 .instructor-details {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-  border-color: gray;
-  color: white;
-  padding-right:11px;
-   padding-top:4px;
+display: flex;
+align-items: center;
+margin-bottom: 20px;
+border-color: gray;
+color: white;
+padding-right:11px;
+ padding-top:4px;
 }
 
 .instructor-photo {
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  margin-right: 20px;
-  padding-top:5px;
+border-radius: 50%;
+width: 100px;
+height: 100px;
+margin-right: 20px;
+padding-top:5px;
 }
 
 .instructor-labels {
-  display: flex;
-  flex-direction: column;
+display: flex;
+flex-direction: column;
 }
 
 .instructor-name {
-  margin: 1px;
-  font-size: 18px;
-    border-style: solid;
+margin: 1px;
+font-size: 18px;
+  border-style: solid;
 }
 
 .instructor-category,
 .instructor-experience {
-  margin: 1px;
-  font-size: 16px;
-  text-shadow: 20px;
-  border-style: solid;
-  text-decoration-style: bold;
+margin: 1px;
+font-size: 16px;
+text-shadow: 20px;
+border-style: solid;
+text-decoration-style: bold;
 
 }
-
 .rating-form {
   display: flex;
   flex-direction: column;
@@ -59,28 +97,6 @@
   border-style:;
   padding-bottom: 7px;
 }
-
-.rating-stars {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 10px;
-}
-
-.rating-stars input[type="radio"] {
-  display: none;
-}
-
-.rating-stars label {
-  font-size: 40px;
-  color: #ddd;
-  cursor: pointer;
-  transition: color 0.1s;
-}
-
-.rating-stars label:hover,.rating-stars label:hover ~ label,.rating-stars input[type="radio"]:checked ~ label {
-  color: pink;
-}
-
 button[type="submit"] {
   padding: 10px 20px;
   border: none;
@@ -93,8 +109,4 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
   background-color: black;
-}
-.rog{
-  display: flex;
-  margin-left: 5px;
 }
