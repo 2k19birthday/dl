@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        // Get all cells with the "available" class
+    const cells = document.querySelectorAll('.available');
+    
+    // Add a click event listener to each cell
+    cells.forEach(cell => {
+      cell.addEventListener('click', () => {
+        // Change the cell's class to "available"
+        cell.classList.remove('available');
+        cell.classList.add('available');
+      });
+    });
+    </script>
+	<meta charset="UTF-8">
+	<title>Driving Course Booking</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+	<h1>March 2023 Driving Course Schedule</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>Time/Day</th>
+                <th>Sunday</th>
+				<th>Monday</th>
+				<th>Tuesday</th>
+				<th>Wednesday</th>
+				<th>Thursday</th>
+				<th>Friday</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>7am - 7:30am</td>
+				<td class="available">Available</td>
+				<td class="available">Available</td>
+				<td class="available">Available</td>
+				<td class="available">Available</td>
+				<td class="available">Available</td>
+                <td class="available">Available</td>
+			</tr>
+			<tr>
+				<td>7:40am - 8:10am</td>
+				<td class="available">Available</td>
+				<td class="available">Available</td>
+				<td class="available">Available</td>
+				<td class="available">Available</td>
+				<td class="available">Available</td>
+                <td class="available">Available</td>
+			</tr>
+			<tr>
+				<td>8:20am - 8:50pm</td>
+				<td class="available">Available</td>
+				<td class="available">Available</td>
+				<td class="available">Available</td>
+				<td class="available">Available</td>
+				<td class="available">Available</td>
+                <td class="available">Available</td>
+			</tr>
+			<tr>
+				<td>9pm - 9:30pm</td>
+				<td class="available">Available</td>
+				<td class="available">Available</td>
+				<td class="available">Available</td>
+				<td class="available">Available</td>
+				<td class="available">Available</td>
+                <td class="available">Available</td>
+			</tr>
+			<tr>
+				<td>10am - 11am</td>
+				<td class="available">Available</td>
+				<td class="available">Available</td>
+				<td class="available">Available</td>
+				<td class="available">Available</td>
+				<td class="available">Available</td>
+                <td class="available">Available</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
