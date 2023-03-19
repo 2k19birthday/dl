@@ -25,7 +25,7 @@ if(isset($_POST['submit'])) {
     }
     
     // Connect to the database
-    $conn = mysqli_connect('localhost', 'root', 'toor', 'quizdbase');
+    $conn = mysqli_connect('localhost', 'root', '', 'quizdbase');
 
     // Check connection
     if (!$conn) {
