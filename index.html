@@ -20,10 +20,21 @@
                 <!-- end logo wrapper -->
                 <!-- nav items start -->
                 <ul class="nav-items">
-                    <li class="nav-item"><a class="active" href="/">Home</a></li>
+                    <li class="nav-item"><a class="active" href="index.html">Home</a></li>
                     <li class="nav-item"><a href="#aboutus">About Us</a></li>
                     <li class="nav-item"><a href="#services">Services</a></li>
-                    <li class="nav-item"><a href="#contactus">Contact</a></li>
+                    <li class="nav-item"><a href="#footer-head">Contact</a></li>
+                    <a href="signinpage.php"><button><h1>Sign In</h1></button></a>
+
+                    <li class="nav-item" id="user-item"><a href="#user">User</a></li>
+                    <script>
+                        // Get the user item by its ID
+                        const userItem = document.getElementById("user-item");
+                         //for now i am putting the js here later i may remove them from her and pput in another palce   
+                        // Set the text of the user item to the logged-in user's name
+                        userItem.querySelector("a").textContent = loggedInUser.name;
+
+                    </script>
                 </ul>
                 <!-- end nav items -->
                 <div class="mobile-responsiveicon"><img src="./images/menu-icon.png" alt=""></div>
@@ -64,7 +75,7 @@
                         <input type="submit" name="submit" value="Submit">
                     </div>
                 </form>
-                <a href="signinpage.php" class="sign-in-btn"><button><h1>Sign in</h1></button></a>
+                
             </div>
             <div>
             //keep sign in page here
@@ -159,7 +170,7 @@
         <!--Footer starts here-->
         <footer>
             <div class="foot">
-                <div class="footer-head">
+                <div class="footer-head" id="footer-head">
                     <h2>GET <span style="color:white;">IN</span> TOUCH!</h2>
                 </div>
                 <div class="footer-body">
