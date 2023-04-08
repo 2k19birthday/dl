@@ -2,7 +2,7 @@
 // Check if the form was submitted
 if(isset($_POST['submit'])) {
     // Get the form data
-    $username_or_email = $_POST['username_or_email'];
+    $email = $_POST['email'];
     $password = $_POST['password'];
     
     // Validate the form data
@@ -24,22 +24,18 @@ if(isset($_POST['submit'])) {
         exit();
     }
     
-    // Connect to the database
-    $conn = mysqli_connect('localhost', 'root', '', 'quizdbase');
-
-    // Check connection
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
+    // Connect to the database, Check connection
+    
+        include 'config.php';
 
     // Query the database to check if the user exists
-    $sql = "SELECT * FROM user WHERE (email = '$username_or_email') AND password = '$password'";
+    $sql = "SELECT * FROM user WHERE (email = '$email') AND password = '$password'";
     $result = mysqli_query($conn, $sql);
 
     if (mysqli_num_rows($result) == 1) {
         // User exists, log them in
         session_start();
-        $_SESSION['username'] = $username_or_email;
+        $_SESSION['email'] = $email;
         header("Location: quiz.php");
     } else {
         // User doesn't exist or password is incorrect
